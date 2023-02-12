@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, IconButton, LinkButton } from "components";
+import { Button, IconButton, LinkButton } from "components/buttons";
+import { Input, TextArea } from "components/inputs";
 import { BsCreditCard } from "react-icons/bs";
 import { SlSocialGoogle } from "react-icons/sl";
 import { MdOutlineDone, MdArrowBackIos } from "react-icons/md";
@@ -12,33 +13,56 @@ const AllComponents = () => {
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
         gap: "10px",
         marginLeft: "50px",
       }}
     >
-      <Button>Order now</Button>
-      <Button type="baseMedium">Shop now</Button>
-      <Button type="baseSmall">Save</Button>
-      <Button type="baseWithIcon" icon={<BsCreditCard />}>
-        Pay online
-      </Button>
-      <Button type="inverted">Order now</Button>
-      <Button type="invertedMedium">Order now</Button>
-      <Button type="invertedWithIcon" icon={<SlSocialGoogle />}>
-        Google
-      </Button>
-      <IconButton type="base" icon={<MdOutlineDone />} />
-      <IconButton type="logo" icon={<FiFacebook />} />
-      <IconButton type="logoInverted" icon={<CgFileDocument />} />
-      <IconButton type="increment" icon={<AiOutlinePlus />} />
-      <IconButton type="decrement" icon={<AiOutlineMinus />} />
-      <LinkButton type="forward" icon={<FiArrowRight />}>
-        See all
-      </LinkButton>
-      <LinkButton type="back" icon={<MdArrowBackIos />}>
-        Restaurants
-      </LinkButton>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          marginLeft: "50px",
+        }}
+      >
+        <Button>Order now</Button>
+        <Button type="baseMedium">Shop now</Button>
+        <Button type="baseSmall">Save</Button>
+        <Button type="baseWithIcon" icon={<BsCreditCard />}>
+          Pay online
+        </Button>
+        <Button type="inverted">Order now</Button>
+        <Button type="invertedMedium">Order now</Button>
+        <Button type="invertedWithIcon" icon={<SlSocialGoogle />}>
+          Google
+        </Button>
+        <IconButton type="base" icon={<MdOutlineDone />} />
+        <IconButton type="logo" icon={<FiFacebook />} />
+        <IconButton type="logoInverted" icon={<CgFileDocument />} />
+        <IconButton type="increment" icon={<AiOutlinePlus />} />
+        <IconButton type="decrement" icon={<AiOutlineMinus />} />
+        <LinkButton type="forward" icon={<FiArrowRight />}>
+          See all
+        </LinkButton>
+        <LinkButton type="back" icon={<MdArrowBackIos />}>
+          Restaurants
+        </LinkButton>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          marginLeft: "50px",
+        }}
+      >
+        <Input title="Name" type="text" placeholder="Name" disabled />
+        <TextArea
+          title="Additional info (opt.)"
+          placeholder="Additional info (opt.)"
+        />
+        <Input title="Search" type="search" placeholder="Search" />
+      </div>
     </div>
   );
 };
