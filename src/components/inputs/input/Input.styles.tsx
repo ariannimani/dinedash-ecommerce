@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaSearch } from "react-icons/fa";
 
 export const Text = styled.input`
   box-sizing: border-box;
@@ -26,4 +27,4 @@ export const Title = styled.span`
   color: ${(props) => props.theme.text.primary};
 `;
 
-export const Search = styled(Text)``;
+export const Date = styled(Text)``;

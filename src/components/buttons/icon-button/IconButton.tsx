@@ -34,6 +34,8 @@ const Button = ({
   children,
   type = "base",
   icon,
+  width,
+  height,
   ...otherProps
 }: {
   children?: React.ReactNode;
