@@ -6,6 +6,7 @@ import {
   Shops,
   UserProfile,
 } from "pages";
+import AllComponents from "pages/all-components/AllComponents";
 import { Route, Routes } from "react-router-dom";
 
 export const AppRoutes: React.FC = () => (
@@ -17,6 +18,7 @@ export const AppRoutes: React.FC = () => (
       <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/order" element={<OrderConfirmation />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/components" element={<AllComponents />} />
     </Routes>
   </>
 );
