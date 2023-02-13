@@ -17,7 +17,8 @@ import { CgFileDocument } from "react-icons/cg";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-import { Tag } from "components/elements";
+import { Favorite, Tag } from "components/elements";
+import Picker from "components/elements/picker/Picker";
 
 const AllComponents = () => {
   return (
@@ -126,6 +127,9 @@ const AllComponents = () => {
         <Tag type="secondary" size="small" variant="clock">
           20-30 minutes
         </Tag>
+        <Favorite type="medium" favorite={false} />
+        <Favorite type="small" favorite={true} />
+        <Picker />
       </div>
     </div>
   );
