@@ -7,6 +7,7 @@ import {
   ToggleButton,
   PopularButton,
 } from "components/buttons";
+import Price from "components/elements/price/Price";
 import { Input, Search, SelectOption, TextArea } from "components/inputs";
 import { BsCreditCard } from "react-icons/bs";
 import { SlSocialGoogle } from "react-icons/sl";
@@ -16,6 +17,7 @@ import { CgFileDocument } from "react-icons/cg";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
+import { Tag } from "components/elements";
 
 const AllComponents = () => {
   return (
@@ -102,6 +104,28 @@ const AllComponents = () => {
         </FilterButton>
         <PopularButton type="popular"> Popular</PopularButton>
         <PopularButton type="popularActive">Popular</PopularButton>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          marginLeft: "50px",
+        }}
+      >
+        <Price type="primary">$5</Price>
+        <Price type="secondary">$4</Price>
+        <Tag type="primary">5.0</Tag>
+        <Tag type="secondary">4.5</Tag>
+        <Tag type="primary" size="small">
+          5.0
+        </Tag>
+        <Tag type="secondary" size="small">
+          4.5
+        </Tag>
+        <Tag type="secondary" size="small" variant="clock">
+          20-30 minutes
+        </Tag>
       </div>
     </div>
   );
