@@ -19,6 +19,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { Favorite, Tag } from "components/elements";
 import Picker from "components/elements/picker/Picker";
+import { RestaurantCard } from "components/cards";
 
 const AllComponents = () => {
   return (
@@ -27,6 +28,7 @@ const AllComponents = () => {
         display: "flex",
         gap: "10px",
         marginLeft: "50px",
+        marginTop: "20px",
       }}
     >
       <div
@@ -127,9 +129,19 @@ const AllComponents = () => {
         <Tag type="secondary" size="small" variant="clock">
           20-30 minutes
         </Tag>
-        <Favorite type="medium" favorite={false} />
-        <Favorite type="small" favorite={true} />
+        <Favorite size="medium" favorite={false} />
+        <Favorite size="small" favorite={true} />
         <Picker />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          marginLeft: "50px",
+        }}
+      >
+        <RestaurantCard />
       </div>
     </div>
   );
