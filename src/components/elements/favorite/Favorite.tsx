@@ -2,28 +2,28 @@ import React from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { FavMedium, FavSmall } from "./Favorite.styles";
 
-type FavoriteType = "medium" | "small";
+type FavoriteSize = "medium" | "small";
 
-const FAVORITE_TYPE_CLASSES: Record<FavoriteType, string> = {
+const FAVORITE_SIZE_CLASSES: Record<FavoriteSize, string> = {
   medium: "medium",
   small: "small",
 };
-const getFavorite = (type: FavoriteType = "medium") =>
+const getFavorite = (size: FavoriteSize = "medium") =>
   ({
-    [FAVORITE_TYPE_CLASSES.medium]: FavMedium,
-    [FAVORITE_TYPE_CLASSES.small]: FavSmall,
-  }[type]);
+    [FAVORITE_SIZE_CLASSES.medium]: FavMedium,
+    [FAVORITE_SIZE_CLASSES.small]: FavSmall,
+  }[size]);
 
 const LinkFavorite = ({
   favorite = false,
-  type,
+  size,
   ...otherProps
 }: {
   favorite: boolean;
-  type: FavoriteType;
+  size: FavoriteSize;
   [key: string]: any;
 }) => {
-  const CustomLink = getFavorite(type);
+  const CustomLink = getFavorite(size);
   return (
     <CustomLink {...otherProps}>
       {favorite ? <FaHeart /> : <FaRegHeart />}
