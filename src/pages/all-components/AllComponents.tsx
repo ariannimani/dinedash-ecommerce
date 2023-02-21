@@ -20,6 +20,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { Favorite, Tag } from "components/elements";
 import Picker from "components/elements/picker/Picker";
 import { ProductCard } from "components/cards";
+import { RestaurantCard } from "components/cards";
 
 const AllComponents = () => {
   return (
@@ -129,8 +130,8 @@ const AllComponents = () => {
         <Tag type="secondary" size="small" variant="clock">
           20-30 minutes
         </Tag>
-        <Favorite type="medium" favorite={false} />
-        <Favorite type="small" favorite={true} />
+        <Favorite size="medium" favorite={false} />
+        <Favorite size="small" favorite={true} />
         <Picker />
       </div>
       <div
@@ -142,6 +143,7 @@ const AllComponents = () => {
         }}
       >
         <ProductCard />
+        <RestaurantCard />
       </div>
     </div>
   );
