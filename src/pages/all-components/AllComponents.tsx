@@ -19,6 +19,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { Favorite, Tag } from "components/elements";
 import Picker from "components/elements/picker/Picker";
+import { ProductCard } from "components/cards";
 import { RestaurantCard } from "components/cards";
 
 const AllComponents = () => {
@@ -141,6 +142,7 @@ const AllComponents = () => {
           marginLeft: "50px",
         }}
       >
+        <ProductCard />
         <RestaurantCard />
       </div>
     </div>
